@@ -38,3 +38,127 @@
 //   height: 100vh;
 //   object-fit: cover;
 // }
+
+.banner-cadre-photo{
+  z-index: 0;
+  position: absolute;
+  right: 0;
+  // height: 90vh;
+}
+
+.banner-cadre-reservation{
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  margin-top: 25vh;
+
+}
+
+.carte-map{
+  position: absolute;
+  top: 105vh;
+}
+// .global-banner{
+//   position: relative;
+// }
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .banner img{
+    width: 83.33%;
+    height: 88vh;
+    object-fit: cover;
+    justify-content: end;
+  }
+  .banner-cadre-reservation{
+    width: 100%;
+    height: 50vh;
+    justify-content: center;
+  }
+
+  #col{
+    column-count: 1;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .banner img{
+    width: 83.33%;
+    height: 88vh;
+    object-fit: cover;
+    justify-content: end;
+  }
+  .banner-cadre-reservation{
+    width: 420px;
+    height: 50vh;
+    justify-content: start;
+    margin-left: 40px;
+  }
+  #col{
+    column-count: 2;
+  }
+  // .cards {
+  //   grid-template-columns: 1fr;
+  // }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .banner img{
+    width: 83.33%;
+    height: 88vh;
+    object-fit: cover;
+  }
+  .banner-cadre-reservation{
+    width: 420px;
+    height: 50vh;
+    justify-content: start;
+  }
+  #col{
+    column-count: 2;
+  }
+  // .cards {
+  //   grid-template-columns: 1fr 1fr;
+  // }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .banner img{
+    width: 83.33%;
+    height: 88vh;
+    object-fit: cover;
+  }
+  .banner-cadre-reservation{
+    width: 420px;
+    height: 50vh;
+    justify-content: start;
+  }
+  #col{
+    column-count: 2;
+  }
+  // .cards {
+  //   grid-template-columns: 1fr 1fr 1fr;
+  // }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .banner img{
+    width: 83.33%;
+    height: 88vh;
+    object-fit: cover;
+  }
+  .banner-cadre-reservation{
+    width: 420px;
+    height: 50vh;
+    justify-content: start;
+  }
+  #col{
+    column-count: 2;
+  }
+  // .cards {
+  //   grid-template-columns: 1fr 1fr 1fr;
+  // }
+}

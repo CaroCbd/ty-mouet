@@ -1,25 +1,17 @@
 
 <div class="d-flex flex-column m-0 col-sm-12">
-  <div class="global-banner d-flex flex-row-reverse justify-content-between align-items-center row row-cols-1 row-cols-sm-2 g-0">
 
-    <div class="col z-0 col-sm-7">
-      <div class="banner img-fluid d-flex mb-3 gap-3 mx-0 rounded-5" style="height:100vh; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1519929436393-fe843baf2cec?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); background-position: center;">
-        <div class="banner-title d-flex flex-column justify-content-center align-items-end gap-3 px-3">
-          <h1 class="fs-1 text-end">Ty-mouët'</h1>
-          <h1 class="fs-1 text-end">À chaque occasion sa mouette</h1>
-          <%# <p class="fs-4 text-end col-6 col-sm-6">Proposez votre mouette à la location !</p> %>
-          <div class="d-flex flex-row row row-cols-1 row-cols-sm-2 g-3 justify-content-center">
-            <%= link_to "Ajoutez une mouette", new_mouette_path, class: "col btn btn-outline-light rounded p-3 fs-5 text col-12 col-sm-8" %>
-            <%= link_to "Voir les mouettes", root_path, class: "col btn btn-outline-light rounded p-3 fs-5 text col-12 col-sm-8" %>
-            <%# <a class="btn btn-outline-light rounded p-3 fs-5 text" href="#index-title">Voir les mouettes</a> %>
-          </div>
-        </div>
-      </div>
+
+  <div class="global-banner d-flex flex-column" id="col">
+
+    <div class=" banner d-flex justify-content-end" >
+      <img src="https://images.unsplash.com/photo-1519929436393-fe843baf2cec?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
     </div>
 
-    <div class="col col-sm-4 ms-2 shadow bg-white rounded-5 z-1">
+
+    <div class="banner-cadre-reservation shadow bg-white rounded-5">
       <h1 class="d-flex justify-content-center text-center mb-4">Trouvez votre mouette grâce à <br>Ty-Mouët' ! </h1>
-      <form action="" class="d-flex justify-content-around mb-5 row row-cols-1 row-cols-sm-2">
+      <form action="" class="d-flex justify-content-around mx-1 mb-5 row row-cols-1 row-cols-sm-2">
         <div class="col d-flex flex-column justify-content-center">
           <label for="start" class="text-center"><strong>Date de début:</strong></label>
           <input type="date" id="start-wanted-date" name="trip-start" value= Date.today min="2024-11-20" max="2028-12-31" />
@@ -41,7 +33,7 @@
   </div>
 
 
-  <div class="mt-3 mx-5 d-flex flex-column align-items-center">
+  <div class="carte-map mt-3 mx-5 d-flex flex-column align-items-center row g-0 ">
 
     <%# Carte  %>
 
@@ -53,7 +45,7 @@
 
 
 
-    <div class="d-flex flex-column col-12 col-sm-9  align-items-center flex-wrap">
+    <div class="d-flex flex-column col-12 col-sm-9 align-items-center flex-wrap">
       <h1 id="index-title" class="my-5 text-center"><strong>Trouvez les mouettes de votre région</strong></h1>
 
         <div class="d-flex mt-5 flex-wrap gap-3 align-items-center">

@@ -408,7 +408,7 @@ mouettes_array.each_with_index do |mouette, index|
 
   if new_mouette.valid?
     new_mouette.save!
-    puts "New mouette created #{mouette.name}"
+    puts "New mouette created #{new_mouette.name}"
   else
     puts "New mouette not created as already existing"
     puts new_mouette.errors.messages

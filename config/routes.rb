@@ -1,3 +1,5 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
   # root to: "pages#home"
   devise_for :users
@@ -9,6 +11,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "mouettes#index"
+
+  # Check user authentication for Sidekiq
+  authenticate :user, lambda { |u| u.admin? } do
+    mount Sidekiq::Web => "/sidekiq"
+  end
 
   resources :mouettes, only: %i[show mine create new] do
     resources :bookings, only: [:create]

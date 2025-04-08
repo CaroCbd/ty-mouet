@@ -138,6 +138,7 @@ GEM
     erubi (1.13.0)
     et-orbi (1.2.11)
       tzinfo
+    eventmachine (1.0.9.1)
     execjs (2.10.0)
     faker (3.5.1)
       i18n (>= 1.8.11, < 2)

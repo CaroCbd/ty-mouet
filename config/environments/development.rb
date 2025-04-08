@@ -11,11 +11,15 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
-  # Show full error reports.
+  # Show full error reports
   config.consider_all_requests_local = true
 
   # Enable server timing
   config.server_timing = true
+
+  # Allows logs to be written in log file
+  config.logger = ActiveSupport::Logger.new("log/development.log")
+  config.log_level = :debug
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.

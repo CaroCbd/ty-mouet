@@ -78,3 +78,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "sidekiq", "~> 7.3"
+gem 'sidekiq-cron', '~> 1.7'

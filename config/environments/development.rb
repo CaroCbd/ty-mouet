@@ -41,8 +41,8 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    user_name:ENV['BREVO_SMTP_USER_NAME'],
-    password:ENV['BREVO_SMTP_PASSWORD'],
+    user_name: ENV["BREVO_SMTP_USER_NAME"],
+    password: ENV["BREVO_SMTP_PASSWORD"],
     domain: 'localhost:3000',
     address: 'smtp-relay.brevo.com',
     port: 587,

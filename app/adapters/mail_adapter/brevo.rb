@@ -13,10 +13,10 @@ module MailAdapter
         }
       )
     end
+
     def api_instance
-      ::SibApiV3Sdk::TransactionalEmailApi.new
+      ::SibApiV3Sdk::TransactionalEmailsApi.new
     end
 
-    end
   end
 end

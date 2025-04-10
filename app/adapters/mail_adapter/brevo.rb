@@ -4,12 +4,27 @@ module MailAdapter
       api_instance.send_transac_email(email)
     end
 
+    def send_welcome_email_now
+      api_instance.send_transac_email(welcome_email)
+    end
+
     private
+
     def email
       ::SibApiV3Sdk::SendSmtpEmail.new(
         {
           to: [{email: "mvives.dev@gmail.com", name: "test user"}],
           templateId: 1
+        }
+      )
+    end
+
+    def welcome_email
+      @user = User.last
+      ::SibApiV3Sdk::SendSmtpEmail.new(
+        {
+          to: [{email: @user.email, name: "test user"}],
+          templateId: 3
         }
       )
     end

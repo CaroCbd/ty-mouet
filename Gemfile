@@ -54,6 +54,8 @@ gem 'devise'
 gem "cloudinary"
 gem "pg_search"
 gem "geocoder"
+gem "mailcatcher"
+gem 'sib-api-v3-sdk'
 
 group :development, :test do
   gem "dotenv-rails"

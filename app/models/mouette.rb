@@ -64,4 +64,11 @@ class Mouette < ApplicationRecord
   validates_uniqueness_of :name, scope: %i[photo description owner category price availability]
   # Eviter qu'un faussaire de mouettes fasse des copies de mouettes illégales
   validates_uniqueness_of :name, scope: %i[photo description]
+  after_create :send_new_mouette_email
+
+  private
+
+  def send_new_mouette_email
+    MailAdapter::Brevo.new.send_new_mouette_email_now
+  end
 end

@@ -10,4 +10,11 @@ class User < ApplicationRecord
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP , message: "format incorrect"}
   validates :email, uniqueness: true
   validates :first_name, length: { minimum: 2, message: "doit comporter au moins 2 lettres" }
+  after_create :send_welcome_email_now
+
+  private
+
+  def send_welcome_email_now
+    MailAdapter::Brevo.new.send_welcome_email_now
+  end
 end

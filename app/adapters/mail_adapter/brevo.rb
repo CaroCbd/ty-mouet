@@ -8,6 +8,10 @@ module MailAdapter
       api_instance.send_transac_email(welcome_email)
     end
 
+    def send_new_mouette_email_now
+      api_instance.send_transac_email(new_mouette_email)
+    end
+
     private
 
     def email
@@ -27,6 +31,18 @@ module MailAdapter
           templateId: 3
         }
       )
+    end
+
+    def new_mouette_email
+      @mouette = Mouette.last
+      @user = @mouette.owner
+      ::SibApiV3Sdk::SendSmtpEmail.new(
+        {
+          to: [{email: @user.email, name: "test user"}],
+          templateId: 4
+        }
+      )
+
     end
 
     def api_instance

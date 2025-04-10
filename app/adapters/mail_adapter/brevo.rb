@@ -27,7 +27,7 @@ module MailAdapter
       @user = User.last
       ::SibApiV3Sdk::SendSmtpEmail.new(
         {
-          to: [{email: @user.email, name: "test user"}],
+          to: [{ email: @user.email, name: "test user" }],
           templateId: 3
         }
       )
